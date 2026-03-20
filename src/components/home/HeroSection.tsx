@@ -18,7 +18,7 @@ const HeroSection = ({ onOpenQuote }: HeroSectionProps) => (
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 text-sm font-medium mb-6">
-            <LeafIcon className="w-4 h-4" />Built to transform spaces around you.
+            Built to transform spaces around you.
           </div>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-foreground">
             Transform Your Workspace Into a{" "}
