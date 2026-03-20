@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import { Award, Leaf, Users } from "lucide-react";
+import { Award, Users } from "lucide-react";
+
+const LeafIcon = ({ className }: { className?: string }) => <img src="/android-chrome-192x192.png" alt="" className={className} />;
 
 const team = [
   { name: "Eleanor Whitfield", title: "Managing Director" },
@@ -9,22 +11,22 @@ const team = [
 ];
 
 const milestones = [
-  { year: "1889", title: "Founded", desc: "Established as a nursery in Melbourne's inner suburbs." },
-  { year: "1950s", title: "Expansion", desc: "Expanded into commercial plant supply across Victoria." },
-  { year: "1990s", title: "Corporate Focus", desc: "Pivoted to dedicated B2B indoor plantscaping services." },
-  { year: "2010s", title: "Green Star", desc: "Became GBCA accredited, pioneering IEQ-15 advisory." },
-  { year: "2024", title: "Digital Transformation", desc: "Launched real-time plant health monitoring platform." },
+  { year: "2024", title: "Concept", desc: "Ruleaf was formed to deliver premium plant experiences for modern workplaces." },
+  { year: "2025", title: "Pilot Projects", desc: "We launched pilot installations and built a service model around speed, quality, and care." },
+  { year: "2025", title: "Service Model", desc: "Our operations expanded to recurring maintenance, replacements, and responsive support." },
+  { year: "2026", title: "Scale Across Cities", desc: "We are growing nationally with a focus on reliable delivery and measurable workplace impact." },
+  { year: "Now", title: "Demo & Launch", desc: "This platform showcases the Ruleaf experience as we onboard new commercial partners." },
 ];
 
 const states = [
-  { abbr: "WA", top: "50%", left: "15%" },
-  { abbr: "NT", top: "25%", left: "40%" },
-  { abbr: "SA", top: "55%", left: "45%" },
-  { abbr: "QLD", top: "30%", left: "70%" },
-  { abbr: "NSW", top: "60%", left: "75%" },
-  { abbr: "VIC", top: "72%", left: "68%" },
-  { abbr: "TAS", top: "88%", left: "72%" },
-  { abbr: "ACT", top: "65%", left: "78%" },
+  { abbr: "WA", position: "top-[58%] left-[18%]", active: true },
+  { abbr: "NT", position: "top-[38%] left-[43%]", active: false },
+  { abbr: "SA", position: "top-[58%] left-[47%]", active: true },
+  { abbr: "QLD", position: "top-[38%] left-[71%]", active: true },
+  { abbr: "NSW", position: "top-[58%] left-[74%]", active: true },
+  { abbr: "VIC", position: "top-[70%] left-[69%]", active: true },
+  { abbr: "TAS", position: "top-[84%] left-[72%]", active: false },
+  { abbr: "ACT", position: "top-[63%] left-[78%]", active: true },
 ];
 
 const About = () => (
@@ -33,14 +35,14 @@ const About = () => (
       {/* Hero */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto text-center mb-24">
         <div className="inline-flex items-center gap-2 bg-accent/10 text-accent rounded-full px-4 py-1.5 text-sm font-medium mb-6">
-          <Leaf className="w-4 h-4" /> Est. 1889
+          <LeafIcon className="w-4 h-4" />Proven delivery mindset.
         </div>
         <h1 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">
-          135 Years of Bringing Nature Indoors
+          Building Better-spaces with Plants
         </h1>
         <p className="text-muted-foreground text-lg leading-relaxed">
-          Founded in 1889 as a humble nursery in Melbourne, GreenSpace has grown into Australia's most trusted commercial plantscaping partner. 
-          For over a century, we've combined horticultural expertise with cutting-edge design to create healthier, more productive workspaces.
+          Ruleaf is a new-generation plant service focused on spaces that you live in.
+          We combine practical horticultural care with clean, modern design to create healthier and more productive environments.
         </p>
       </motion.div>
 
@@ -66,8 +68,8 @@ const About = () => (
       <section className="mb-24">
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {[
-            { icon: Leaf, title: "Sustainability", desc: "Every decision we make prioritises environmental impact. We source locally, use organic practices, and offset our carbon footprint." },
-            { icon: Award, title: "Expertise", desc: "Our team includes certified horticulturists, biophilic designers, and GBCA accredited consultants with decades of experience." },
+            { icon: LeafIcon, title: "Sustainability", desc: "Every decision we make prioritises environmental impact. We source locally, use organic practices, and offset our carbon footprint." },
+            { icon: Award, title: "Expertise", desc: "Our team includes certified horticulturists, biophilic designers, and GBCA accredited consultants focused on practical outcomes." },
             { icon: Users, title: "Service", desc: "Dedicated account managers, 24-hour replacement guarantees, and a commitment to exceeding expectations on every project." },
           ].map((v, i) => (
             <motion.div key={v.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
@@ -87,17 +89,21 @@ const About = () => (
         className="bg-primary/5 rounded-2xl p-8 text-center max-w-2xl mx-auto mb-24 border border-border">
         <Award className="w-10 h-10 text-accent mx-auto mb-4" />
         <h3 className="font-display text-xl font-bold text-foreground mb-2">GBCA Accredited Partner</h3>
-        <p className="text-sm text-muted-foreground">We help commercial properties earn Green Star IEQ-15 indoor environment quality credits through strategic biophilic design and indoor plantscaping.</p>
+        <p className="text-sm text-muted-foreground">We help commercial properties earn Green Star IEQ-15  environment quality credits through strategic biophilic design and  plantscaping.</p>
       </motion.div>
 
       {/* Map */}
       <section className="mb-24">
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="font-display text-2xl md:text-3xl font-bold text-center mb-12 text-foreground">Australia-Wide Coverage</motion.h2>
-        <div className="relative w-full max-w-md mx-auto aspect-[4/3] bg-card rounded-2xl border border-border shadow-warm">
+        <div className="relative w-full max-w-lg mx-auto aspect-[4/3] bg-card rounded-2xl border border-border shadow-warm p-4 sm:p-6">
+          <svg viewBox="0 0 420 300" className="absolute inset-0 w-full h-full p-5 text-primary/10" aria-hidden="true" fill="currentColor">
+            <path d="M60 190L78 165L95 146L92 124L112 104L140 92L175 94L208 78L243 86L274 74L304 86L326 112L348 110L364 130L356 158L342 178L320 186L308 202L286 210L270 228L242 230L224 244L190 238L166 248L140 242L122 226L104 224L90 206L76 208Z" />
+            <path d="M303 248L320 252L327 266L317 275L300 270L295 258Z" />
+          </svg>
           {states.map((s) => (
-            <div key={s.abbr} className="absolute font-mono text-xs font-bold text-primary" style={{ top: s.top, left: s.left }}>
-              <span className={`${["NSW", "VIC", "QLD", "WA", "SA", "ACT"].includes(s.abbr) ? "bg-accent/20 text-accent px-2 py-1 rounded" : "text-muted-foreground"}`}>
+            <div key={s.abbr} className={`absolute font-mono text-xs font-bold ${s.position}`}>
+              <span className={s.active ? "bg-accent/20 text-accent px-2 py-1 rounded" : "text-muted-foreground"}>
                 {s.abbr}
               </span>
             </div>

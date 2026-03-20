@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const reasons = [
-  "135 years of expertise",
   "GBCA accredited",
   "Replacement guarantee within 24 hours",
   "Dedicated account manager",
@@ -15,7 +14,7 @@ const WhyChooseUs = () => (
     <div className="container mx-auto px-4">
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-8 text-foreground">Why Choose GreenSpace</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-8 text-foreground">Why Choose Ruleaf</h2>
           <div className="space-y-5">
             {reasons.map((r, i) => (
               <motion.div key={r} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}

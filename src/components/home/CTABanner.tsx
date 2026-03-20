@@ -13,7 +13,7 @@ const CTABanner = ({ onOpenQuote }: CTABannerProps) => (
           Ready to Bring Nature Into Your Workspace?
         </h2>
         <p className="text-primary-foreground/70 mb-8 max-w-lg mx-auto">
-          Join 500+ Australian businesses that trust GreenSpace for their indoor plantscaping needs.
+          Join 500+ Australian businesses that trust Ruleaf for their plantscaping needs.
         </p>
         <Button size="lg" onClick={onOpenQuote} className="bg-accent text-accent-foreground hover:bg-gold-light text-base px-10">
           Book Free Consultation

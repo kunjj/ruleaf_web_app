@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 
 const stats = [
-  { value: 135, suffix: "+", label: "Years Experience" },
+  { value: 24, suffix: "/7", label: "Plant Care Support" },
   { value: 12000, suffix: "+", label: "Plants Managed" },
   { value: 500, suffix: "+", label: "Corporate Clients" },
   { value: 6, suffix: "", label: "Cities Across Australia" },

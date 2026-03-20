@@ -9,11 +9,11 @@ import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const faqs = [
-  { q: "How does plant hire work?", a: "We provide premium indoor plants on a flexible monthly rental basis. We handle delivery, installation, and ongoing maintenance. You simply enjoy a greener workspace with zero hassle." },
+  { q: "How does plant hire work?", a: "We provide premium  plants on a flexible monthly rental basis. We handle delivery, installation, and ongoing maintenance. You simply enjoy a greener workspace with zero hassle." },
   { q: "What's included in the maintenance service?", a: "Our certified horticulturists visit your premises on a regular schedule to water, prune, fertilise, and inspect every plant. We also rotate and replace plants as needed." },
   { q: "Can I customise the plants and planters?", a: "Absolutely. Our design team works with you to select plants and planters that complement your brand, interior design, and space requirements." },
   { q: "What happens if a plant dies?", a: "We guarantee plant health. If any plant declines beyond recovery, we replace it within 24 hours at no additional cost — that's our replacement guarantee." },
-  { q: "Do you help with Green Star certification?", a: "Yes. As GBCA accredited partners, we help commercial properties earn Green Star IEQ-15 credits through strategic indoor plantscaping." },
+  { q: "Do you help with Green Star certification?", a: "Yes. As GBCA accredited partners, we help commercial properties earn Green Star IEQ-15 credits through strategic  plantscaping." },
 ];
 
 const Contact = () => {
@@ -74,7 +74,7 @@ const Contact = () => {
             {[
               { icon: MapPin, label: "Address", value: "Level 12, 200 George Street\nSydney NSW 2000" },
               { icon: Phone, label: "Phone", value: "1300 GREEN SP (1300 473 367)" },
-              { icon: Mail, label: "Email", value: "hello@greenspace.com.au" },
+              { icon: Mail, label: "Email", value: "hello@ruleaf.com.au" },
               { icon: Clock, label: "Business Hours", value: "Monday – Friday: 8:00 AM – 6:00 PM\nSaturday: 9:00 AM – 1:00 PM" },
             ].map((c) => (
               <div key={c.label} className="flex items-start gap-4">

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
 const testimonials = [
-  { name: "Sarah Mitchell", company: "ANZ Bank", quote: "GreenSpace transformed our headquarters. The plants have genuinely improved employee wellbeing and the maintenance is completely hands-off for us." },
+  { name: "Sarah Mitchell", company: "ANZ Bank", quote: "Ruleaf transformed our headquarters. The plants have genuinely improved employee wellbeing and the maintenance is completely hands-off for us." },
   { name: "James Chen", company: "Deloitte Australia", quote: "Professional, reliable, and the design consultation exceeded our expectations. Our office feels like a completely different space." },
   { name: "Dr. Lisa Wong", company: "Royal Children's Hospital", quote: "The calming green spaces they created for our recovery areas have received wonderful feedback from patients and families." },
 ];

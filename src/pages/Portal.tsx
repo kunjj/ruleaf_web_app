@@ -5,10 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Leaf, CalendarDays, Heart, AlertTriangle, Download } from "lucide-react";
+import { CalendarDays, Heart, AlertTriangle, Download } from "lucide-react";
+
+const LeafIcon = ({ className }: { className?: string }) => <img src="/android-chrome-192x192.png" alt="" className={className} />;
 
 const metrics = [
-  { label: "Total Plants", value: "34", icon: Leaf, color: "text-green-light" },
+  { label: "Total Plants", value: "34", icon: LeafIcon, color: "text-green-light" },
   { label: "Next Service Visit", value: "14 Mar", icon: CalendarDays, color: "text-accent" },
   { label: "Plants Healthy", value: "31", icon: Heart, color: "text-green-light" },
   { label: "Alerts", value: "3", icon: AlertTriangle, color: "text-destructive" },

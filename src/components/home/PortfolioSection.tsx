@@ -9,7 +9,7 @@ const projects = [
   { name: "Royal Children's Hospital", city: "Brisbane", industry: "Healthcare", desc: "Calming green spaces for patient recovery areas.", seed: "hospital" },
   { name: "Westfield Shopping Centre", city: "Perth", industry: "Retail", desc: "Statement feature plants and seasonal installations.", seed: "westfield" },
   { name: "Deloitte Australia", city: "Sydney", industry: "Office", desc: "Modern workspace greenery with smart monitoring.", seed: "deloitte" },
-  { name: "University of Melbourne", city: "Melbourne", industry: "Education", desc: "Campus-wide indoor plantscaping for study areas.", seed: "unimelb" },
+  { name: "University of Melbourne", city: "Melbourne", industry: "Education", desc: "Campus-wide  plantscaping for study areas.", seed: "unimelb" },
 ];
 
 const PortfolioSection = () => {

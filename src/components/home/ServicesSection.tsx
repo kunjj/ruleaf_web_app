@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
-import { Leaf, Palette, Wrench, Award, ClipboardCheck, Calendar } from "lucide-react";
+import { Palette, Wrench, Award, ClipboardCheck, Calendar } from "lucide-react";
+
+const LeafIcon = ({ className }: { className?: string }) => <img src="/android-chrome-192x192.png" alt="" className={className} />;
 
 const services = [
-  { icon: Leaf, title: "Plant Hire & Rental", desc: "Flexible monthly contracts for offices, lobbies, and retail spaces." },
+  { icon: LeafIcon, title: "Plant Hire & Rental", desc: "Flexible monthly contracts for offices, lobbies, and retail spaces." },
   { icon: Palette, title: "Plantscaping & Design", desc: "Full biophilic design consultation and installation." },
   { icon: Wrench, title: "Maintenance & Care", desc: "Scheduled visits, plant replacement guarantee." },
   { icon: Award, title: "Green Star Advisory", desc: "Help earn GBCA Green Star IEQ-15 credits." },

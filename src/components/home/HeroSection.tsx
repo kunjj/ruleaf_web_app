@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Leaf, Droplets, AlertTriangle } from "lucide-react";
+import { Droplets, AlertTriangle } from "lucide-react";
 
 interface HeroSectionProps {
   onOpenQuote: () => void;
 }
+
+const LeafIcon = ({ className }: { className?: string }) => <img src="/android-chrome-192x192.png" alt="" className={className} />;
 
 const HeroSection = ({ onOpenQuote }: HeroSectionProps) => (
   <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -16,14 +18,14 @@ const HeroSection = ({ onOpenQuote }: HeroSectionProps) => (
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 text-sm font-medium mb-6">
-            <Leaf className="w-4 h-4" /> Trusted since 1889
+            <LeafIcon className="w-4 h-4" />Built to transform spaces around you.
           </div>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-foreground">
             Transform Your Workspace Into a{" "}
             <span className="text-primary">Living Environment</span>
           </h1>
           <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-            Premium indoor plant hire, installation & maintenance for commercial spaces across Australia.
+            Premium  plant hire, installation & maintenance for commercial spaces across Australia.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button size="lg" onClick={onOpenQuote} className="bg-accent text-accent-foreground hover:bg-gold-light text-base px-8">
@@ -42,10 +44,10 @@ const HeroSection = ({ onOpenQuote }: HeroSectionProps) => (
               <span className="text-sm font-medium text-foreground">Live Plant Health Dashboard</span>
             </div>
             {[
-              { name: "Monstera – Lobby", status: "Healthy", icon: Leaf, color: "text-green-light" },
-              { name: "Fiddle Leaf – L3", status: "Healthy", icon: Leaf, color: "text-green-light" },
+              { name: "Monstera – Lobby", status: "Healthy", icon: LeafIcon, color: "text-green-light" },
+              { name: "Fiddle Leaf – L3", status: "Healthy", icon: LeafIcon, color: "text-green-light" },
               { name: "ZZ Plant – Meeting Rm", status: "Needs Water", icon: Droplets, color: "text-accent" },
-              { name: "Peace Lily – Reception", status: "Healthy", icon: Leaf, color: "text-green-light" },
+              { name: "Peace Lily – Reception", status: "Healthy", icon: LeafIcon, color: "text-green-light" },
               { name: "Pothos – Breakroom", status: "Check Light", icon: AlertTriangle, color: "text-accent" },
             ].map((p, i) => (
               <motion.div key={i} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 + i * 0.1 }}
